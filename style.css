@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(95, 55, 35);
+}
+
+.logo-div {
+    margin: 10px;
+}
+
+.timer-div {
+    color: bisque;
+    font-size: 50vh;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
