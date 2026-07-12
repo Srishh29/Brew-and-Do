@@ -7,6 +7,9 @@
 body {
     background-color:#5f3723;
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navbar {
@@ -15,21 +18,79 @@ body {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 10px;
+    padding: 10px;
+}
+
+.functional-div{
+    display:flex;
+    flex-direction:row;
+    gap: 145px;
+    margin-top: 50px;
+}
+
+.timer{
+    color: #c79a66;
+    font-size: 35vh;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 28px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-family: "indie flower", cursive;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Start Button */
+#start {
+    background: #d8b07a;
+    color: #6A3A22;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#start:hover {
+    transform: translateY(-3px);
+    background: #e6c08c;
+}
+
+/* Reset Button */
+#reset {
+    background: transparent;
+    color: #d8b07a;
+    border: 2px solid #d8b07a;
+}
+
+#reset:hover {
+    background: #d8b07a;
+    color: #6A3A22;
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: scale(0.96);
 }
 
 .theme-icon {
-    position: fixed;
-    top: 10px;
-    right: 10px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -30px;
 }
 
 .theme {
-    height: 90px;
+    height: 50vh;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -57,4 +118,30 @@ body {
 
 .theme-icon:hover p {
     opacity: 1;
+}
+
+.todo-div {
+    position: relative;
+    width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    color: #e4b887;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    font-family: "indie flower", cursive;
+}
+
+.todo-div::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("todo-bg.jpg") center/cover no-repeat;
+    opacity: 0.2;   /* Adjust opacity here */
+    z-index: -1;
+}
+
+.todo-div h2,
+.todo-div ul {
+    position: relative;
+    z-index: 1;
 }

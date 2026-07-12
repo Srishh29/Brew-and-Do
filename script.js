@@ -22,10 +22,30 @@ logo.addEventListener("mouseleave", () => {
 
 //theme toggle
 let themeIcon = document.querySelector(".theme");
+let timer= document.querySelector(".timer");
+let startBtn = document.querySelector("#start")
+let resetBtn = document.querySelector("#reset")
 let isdark = true;
 
 themeIcon.addEventListener("click", () => {
-    themeIcon.src = isdark ? "lighttheme.png" : "darktheme.png";
-    document.body.style.backgroundColor = isdark ? "#c79a66" : "#5f3723";
+    if (themeIcon.src.includes("darktheme.png")) {
+        themeIcon.src = "lighttheme.png";
+        document.body.style.backgroundColor = "#c79a66";
+        timer.style.color= "#5f3723";
+        startBtn.style.backgroundColor= "#5f3723";
+        startBtn.style.color= "#c79a66";
+        resetBtn.style.backgroundColor= "#c79a66";
+        resetBtn.style.color= "#5f3723";
+        resetBtn.style.borderColor= "#5f3723";
+    } else {
+        themeIcon.src = "darktheme.png";
+        document.body.style.backgroundColor = "#5f3723";
+        timer.style.color= "#c79a66";
+        startBtn.style.backgroundColor= "#c79a66";
+        startBtn.style.color= "#5f3723";
+        resetBtn.style.backgroundColor= "#5f3723";
+        resetBtn.style.color= "#c79a66";
+        resetBtn.style.borderColor= "#c79a66";
+    }
     isdark = !isdark;
 });
