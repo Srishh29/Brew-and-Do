@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brew & Do</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="navbar">
         <div class="logo-div">
             <a href="#"><img class="logo" src="bnd.png"></a>
         </div>
+        <p>&#10084 Brew coffee, get things done. &#10084</p>
     </div>
 
     <div class="functional-div">
         <div class="timer-div">
+            <button id="session"><p>Focus Mode<i class="fa-solid fa-mug-hot" style="color: #d4ac7d;"></i></p></button>
             <div class="timer">25:00</div>
+            <div class="quote-div">
+                <p id="quote"></p>
+            </div>
             <div class="btn-div">
                 <button class="btn" id="start">Start</button>
                 <button class="btn" id="reset">Reset</button>
